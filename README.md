@@ -1,6 +1,6 @@
-# shomo-stack
+# d-stack
 
-A set of agent skills that Shomo uses with Claude Code and Codex. They cover interviewing and stress-testing plans, researching and learning, finding reading material, and writing prose without generic AI patterns.
+d-stack is a skill stack for Claude Code and Codex, built for general knowledge-management work. The skills cover interviewing and stress-testing plans, researching and learning, finding reading material, and writing prose without generic AI patterns.
 
 Each skill is a folder under `skills/` with a `SKILL.md` file, and some have supporting files.
 
@@ -36,16 +36,16 @@ Clone the repository, then copy the skill folders into your agent's skills direc
 Claude Code:
 
 ```sh
-git clone https://github.com/shomoD9/shomo-stack.git
+git clone https://github.com/shomoD9/d-stack.git
 mkdir -p ~/.claude/skills
-cp -r shomo-stack/skills/* ~/.claude/skills/
+cp -r d-stack/skills/* ~/.claude/skills/
 ```
 
 Codex:
 
 ```sh
 mkdir -p ~/.codex/skills
-cp -r shomo-stack/skills/* ~/.codex/skills/
+cp -r d-stack/skills/* ~/.codex/skills/
 ```
 
 To install a single skill, copy only that folder, for example `skills/research`.
