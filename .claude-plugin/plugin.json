@@ -9,6 +9,9 @@
   "homepage": "https://github.com/shomoD9/d-stack",
   "repository": "https://github.com/shomoD9/d-stack",
   "license": "MIT",
+  "documentationUrl": "https://github.com/shomoD9/d-stack#readme",
+  "supportUrl": "https://github.com/shomoD9/d-stack/issues",
+  "keywords": ["research", "writing", "learning", "interviewing", "planning", "prompting", "skills"],
   "displayName": "d-stack",
   "icon": "./.claude-plugin/icon.png"
 }
