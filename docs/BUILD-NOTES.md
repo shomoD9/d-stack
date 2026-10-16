@@ -45,7 +45,14 @@ All tests below used newly created temporary HOME directories, never the maintai
 | Latest npx route on Node 20.19.2 | FAIL: unsupported runtime | skills 1.7.2 requires Node >=22.20.0 and uses fs/promises glob. README states the requirement. No own npm package was invented. |
 | `D_STACK_TEST_REMOTE=1 bash scripts/test-install.sh` | PASS | Public-source streamed install plus local lifecycle suite; ref regression added |
 | GitHub Actions lint + clean Debian container install | PASS | [Hosted run on 8e53c2f](https://github.com/shomoD9/d-stack/actions/runs/38850821781); includes strict Claude validation, ShellCheck, and clean-container lifecycle suite. Subsequent revision runs appear under the CI badge. |
+| `curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/v1.0.0/install.sh \| D_STACK_REF=v1.0.0 bash -s -- --all` | PASS | Executed after tag push; both complete skill trees match the repository byte-for-byte |
 | Desktop plugin discovery/activation | NOT RUN | No desktop session; CLI installation is verified separately |
 | Hosted directory acceptance | NOT RUN | Preparation only; no submissions made |
 
 There is no Docker binary in this editing environment. The real container verification ran successfully on GitHub Actions, rather than substituting a temporary HOME for a container. Conversation-level skill quality is outside these installation checks. The public-content scan and `git diff --check` pass before commits. MIT LICENSE and THIRD_PARTY_NOTICES.md remain unchanged.
+
+## Release verification
+
+- Tagged code commit: `e18ff40cdae310fcc8f6df24016c638392cd0eff`. [CI on the exact tagged code](https://github.com/shomoD9/d-stack/actions/runs/38850956976) passed both lint/Claude validation and the clean Debian container lifecycle/ref tests.
+- Published [d-stack v1.0.0](https://github.com/shomoD9/d-stack/releases/tag/v1.0.0), with notes extracted from CHANGELOG.md. The release-tag URL and tag-pinned installer were then tested successfully.
+- This release-evidence documentation is recorded on main after publication; the immutable tag retains the tested code. No external directory submission was made.
