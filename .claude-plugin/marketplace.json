@@ -1,0 +1,18 @@
+{
+  "name": "d-stack",
+  "owner": {
+    "name": "Shomo"
+  },
+  "metadata": {
+    "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "d-stack",
+      "source": "./",
+      "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+      "version": "1.0.0"
+    }
+  ]
+}

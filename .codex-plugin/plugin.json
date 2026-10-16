@@ -1,0 +1,28 @@
+{
+  "name": "d-stack",
+  "version": "1.0.0",
+  "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+  "skills": "./skills/",
+  "author": {
+    "name": "Shomo",
+    "url": "https://github.com/shomoD9"
+  },
+  "homepage": "https://github.com/shomoD9/d-stack",
+  "repository": "https://github.com/shomoD9/d-stack",
+  "license": "MIT",
+  "interface": {
+    "displayName": "d-stack",
+    "shortDescription": "Research, learn, write",
+    "longDescription": "Twelve Markdown workflows for primary-source research, learning, questioning plans, finding reading material, and writing clear prose. For Claude Code and Codex users. Some skills require interactive question tools; grill-with-docs also requires the upstream domain-modeling skill. No MCP server or account connection is bundled.",
+    "developerName": "Shomo",
+    "category": "Productivity",
+    "capabilities": [
+      "Research questions",
+      "Learn concepts",
+      "Stress-test plans",
+      "Write clear prose"
+    ],
+    "websiteURL": "https://github.com/shomoD9/d-stack",
+    "supportURL": "https://github.com/shomoD9/d-stack/issues"
+  }
+}

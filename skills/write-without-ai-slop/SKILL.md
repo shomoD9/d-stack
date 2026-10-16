@@ -99,7 +99,7 @@ Present a source on its own terms before applying it elsewhere. Do not recruit a
 
 Do not:
 
-- present a curator's application as the source's original claim;
+- present a curator's use as the source's original claim;
 - strip theology, history, politics, or disciplinary context merely to make an idea fit a modern framework;
 - treat a literary depiction as empirical evidence;
 - treat a metaphor from science as proof of a psychological mechanism;
