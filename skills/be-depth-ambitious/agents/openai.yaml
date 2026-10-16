@@ -1,0 +1,5 @@
+interface:
+  display_name: "Be Depth Ambitious"
+  short_description: "Rewrite the task you just gave into a deeper version"
+policy:
+  allow_implicit_invocation: false
