@@ -1,0 +1,5 @@
+interface:
+  display_name: "Be Range Ambitious"
+  short_description: "Rewrite the task you just gave by bringing in other fields"
+policy:
+  allow_implicit_invocation: false

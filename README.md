@@ -17,6 +17,8 @@ Each skill is a folder under `skills/` with a `SKILL.md` file, and some have sup
 | [teach](skills/teach) | Teach the user a new skill or concept, within this workspace. |
 | [need-reading-material](skills/need-reading-material) | The user is in need for inspiration. Find them high quality sources to read. |
 | [be-depth-ambitious](skills/be-depth-ambitious) | Slash-command only: after you give a task, run `/be-depth-ambitious` to rewrite it as a deeper (not bigger) version, using what a top professional would do. |
+| [be-altitude-ambitious](skills/be-altitude-ambitious) | Slash-command only: after you give a task, run `/be-altitude-ambitious` to rewrite it as a higher (not bigger) version that owns the outcome behind the task. |
+| [be-range-ambitious](skills/be-range-ambitious) | Slash-command only: after you give a task, run `/be-range-ambitious` to rewrite it as a wider (not bigger) version, using specialists from other fields. |
 | [write-without-ai-slop](skills/write-without-ai-slop) | Draft original expository and analytical prose that is clear, neutral, specific, human, and free of generic AI-writing patterns. |
 
 `grill-me`, `grill-with-docs`, `wayfinder` and `loop-me` invoke `grilling`, so install it alongside them. `grill-with-docs` also refers to a `domain-modeling` skill from the upstream repository, which is not included here.
@@ -28,7 +30,7 @@ Most of the grilling and planning skills come from Matt Pocock's [mattpocock/ski
 - `grill-me`, `grill-with-docs`, `wayfinder`, `research` and `teach` are copied from that repository without changes.
 - `grilling` is an edited version of the upstream skill. `loop-me` is derived from it.
 
-`need-reading-material` and `write-without-ai-slop` are Shomo's own. `be-depth-ambitious` is inspired by Felix Rieseberg's essay [How to be more ambitious: a tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/).
+`need-reading-material` and `write-without-ai-slop` are Shomo's own. `be-depth-ambitious`, `be-altitude-ambitious` and `be-range-ambitious` are inspired by Felix Rieseberg's essay [How to be more ambitious: a tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/).
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the upstream copyright notice and license text.
 

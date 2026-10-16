@@ -1,0 +1,5 @@
+interface:
+  display_name: "Be Altitude Ambitious"
+  short_description: "Rewrite the task you just gave to own the outcome, not the task"
+policy:
+  allow_implicit_invocation: false
