@@ -22,4 +22,30 @@ Ship d-stack 1.0.0 as a documented, reversible skill distribution for Claude Cod
 
 ## Verification
 
-Results are recorded below after execution.
+All tests below used newly created temporary HOME directories, never the maintainer's live skill directories. Paths containing spaces are covered by the regression suite. Claude plugin tests explicitly isolate `CLAUDE_CONFIG_DIR`; Codex plugin tests isolate `CODEX_HOME` and create it first because CLI 0.162.1 requires an existing directory. The Codex CLI emits a harmless helper-alias warning for homes under `/tmp`; installation still succeeds and bytes are checked.
+
+| Check / exact entry point | Result | Evidence |
+| --- | --- | --- |
+| `python3 scripts/lint.py` | PASS | 12 frontmatter records, 4 JSON manifests with identity/path checks, generated catalog matches |
+| `bash -n install.sh scripts/test-install.sh` and ShellCheck | PASS | Both shell files parse and lint cleanly |
+| `claude plugin validate . --strict` | PASS | Marketplace accepted by Claude Code 2.1.300 |
+| `claude plugin validate .claude-plugin/plugin.json --strict` | PASS | Plugin accepted independently; no warnings |
+| `bash scripts/test-install.sh` | PASS | Claude/Codex/all; complete supporting assets and notices compared; repeat/update/uninstall; single teach; grill-me dependency; unowned and symlink collisions; invalid arguments; HOME with spaces |
+| `curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh \| bash` | PASS | All twelve skills appear under both tool paths; byte comparison against canonical skill tree |
+| Same curl source with `bash -s -- --claude` | PASS | Claude skill files present; clean fixture |
+| Same curl source with `bash -s -- --codex` | PASS | Codex skill files present; clean fixture |
+| Same curl source with `bash -s -- --all` | PASS | Both destinations populated |
+| Same curl source with `bash -s -- --codex --skill research` | PASS | Selected skill present |
+| Same curl source with `--all --update`, then `--all --uninstall` | PASS | Reinstallation succeeds, owned skills removed |
+| Streamed script with `D_STACK_REF=<full commit SHA>` | PASS after fix | Initial branch-only clone rejected SHA; replaced with init/fetch/detached checkout. Rechecked against commit 8e53c2f and added a remote-SHA regression fixture. Branch pins also pass. The documented release tag uses this same fetch path. |
+| `claude plugin marketplace add shomoD9/d-stack`, then `claude plugin install d-stack@d-stack` | PASS | Actual public remote source; installed cache has all twelve skills and every supporting file byte-identical; uninstall also passes |
+| `codex plugin marketplace add shomoD9/d-stack`, then `codex plugin add d-stack@d-stack` | PASS | Codex CLI 0.162.1 installs cache version 1.0.0; complete skills tree matches; remove also passes |
+| `npx skills add shomoD9/d-stack --global --agent claude-code codex --skill '*' --yes` | PASS on Node 22 | skills CLI 1.7.2, Node 22.23.3; all twelve canonical skills and supporting assets match through both host paths |
+| `npx skills add shomoD9/d-stack --global --agent codex --skill research --yes` | PASS on Node 22 | research present and byte-identical, teach absent |
+| Latest npx route on Node 20.19.2 | FAIL: unsupported runtime | skills 1.7.2 requires Node >=22.20.0 and uses fs/promises glob. README states the requirement. No own npm package was invented. |
+| `D_STACK_TEST_REMOTE=1 bash scripts/test-install.sh` | PASS | Public-source streamed install plus local lifecycle suite; ref regression added |
+| GitHub Actions lint + clean Debian container install | PASS | [Hosted run on 8e53c2f](https://github.com/shomoD9/d-stack/actions/runs/38850821781); includes strict Claude validation, ShellCheck, and clean-container lifecycle suite. Subsequent revision runs appear under the CI badge. |
+| Desktop plugin discovery/activation | NOT RUN | No desktop session; CLI installation is verified separately |
+| Hosted directory acceptance | NOT RUN | Preparation only; no submissions made |
+
+There is no Docker binary in this editing environment. The real container verification ran successfully on GitHub Actions, rather than substituting a temporary HOME for a container. Conversation-level skill quality is outside these installation checks. The public-content scan and `git diff --check` pass before commits. MIT LICENSE and THIRD_PARTY_NOTICES.md remain unchanged.

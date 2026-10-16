@@ -62,5 +62,12 @@ if [[ ${D_STACK_TEST_REMOTE:-0} == 1 ]]; then
     test -f "$tool_root/teach/MISSION-FORMAT.md"
   done
   run --all --uninstall
+  # Exercise commit pins too: clone --branch cannot handle a commit hash.
+  remote_sha=$(git ls-remote https://github.com/shomoD9/d-stack.git HEAD | cut -f1)
+  test -n "$remote_sha"
+  D_STACK_REF="$remote_sha" bash -s -- --codex --skill research < "$repo/install.sh" > /dev/null
+  test -f "$HOME/.agents/skills/research/SKILL.md"
+  test ! -e "$HOME/.claude/skills/research"
+  run --all --uninstall
 fi
 printf '%s\n' 'PASS: tool selection, assets/notices, repeat/update/uninstall, dependencies, collisions, symlinks, invalid arguments'

@@ -70,8 +70,10 @@ if [[ -n ${BASH_SOURCE[0]:-} ]]; then
 fi
 if [[ -z $source_root ]]; then
   command -v git >/dev/null || fail 'Git is required for streamed installs'
-  git clone --quiet --depth 1 --branch "${D_STACK_REF:-main}" \
-    https://github.com/shomoD9/d-stack.git "$scratch/repo"
+  git init --quiet "$scratch/repo"
+  git -C "$scratch/repo" remote add origin https://github.com/shomoD9/d-stack.git
+  git -C "$scratch/repo" fetch --quiet --depth 1 -- origin "${D_STACK_REF:-main}"
+  git -C "$scratch/repo" checkout --quiet --detach FETCH_HEAD
   source_root=$scratch/repo
 fi
 names=()
