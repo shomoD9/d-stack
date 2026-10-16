@@ -9,7 +9,7 @@ The current [Claude Code publishing guide](https://code.claude.com/docs/en/plugi
 1. Use an eligible paid Claude plan. Pro/Max users can submit personally; Team/Enterprise require an Owner or the permitted Enterprise Directory role. Connect a GitHub account with push access to `shomoD9/d-stack` in the Claude organization that will submit.
 2. Read the [pre-submission checklist](https://claude.com/docs/plugins/pre-submission-checklist), directory terms, and directory policy linked by the walkthrough. Review tool assumptions and the external `domain-modeling` dependency before presenting this bundle as usable across all Claude surfaces.
 3. Run `claude plugin validate . --strict` and `claude plugin validate .claude-plugin/plugin.json --strict`; confirm CI passes on the intended commit. Local validation does not cover all directory rules.
-4. At the portal, select **Submit new → Plugin bundle**. Repository: `https://github.com/shomoD9/d-stack`. Plugin path: leave blank (repo root). Branch or tag: `v1.0.0` for the reviewed release, or `main` if intentionally tracking future commits.
+4. At the portal, select **Submit new → Plugin bundle**. Repository: `https://github.com/shomoD9/d-stack`. Plugin path: leave blank (repo root). Branch or tag: `v1.0.1` for the reviewed release, or `main` if intentionally tracking future commits.
 5. Select **Validate**. Fix blocking findings in the repo and validate the resulting commit again. Review **Listing details**, which comes from the manifest and README.
 6. Answer **Data handling** from the actual skill behavior: the package is Markdown with no bundled connector or hosted service, but research asks the host to browse and some workflows create files or tracker issues. The shell installer is a separate user-invoked download. Do not claim the host never accesses personal data.
 7. Complete **Compliance**, provide a monitored maintainer email privately, and review all attestations. Choose GitHub push webhook or scheduled checks under update settings. Only the maintainer should select **Submit for review**.
@@ -30,9 +30,9 @@ OpenAI now documents a shared plugin directory with skills-only packages support
 3. Create a public-only ZIP from the tested release, with `.codex-plugin/plugin.json` and `skills/` at its root, retaining the license, README, and third-party notices. For example, from a checkout with the release tag:
 
    ```sh
-   git archive --format=zip --output=/tmp/d-stack-v1.0.0.zip v1.0.0 \
+   git archive --format=zip --output=/tmp/d-stack-v1.0.1.zip v1.0.1 \
      .codex-plugin skills README.md LICENSE THIRD_PARTY_NOTICES.md CHANGELOG.md
-   unzip -l /tmp/d-stack-v1.0.0.zip
+   unzip -l /tmp/d-stack-v1.0.1.zip
    ```
 
 4. Open [Plugins](https://platform.openai.com/plugins), select **Upload new or existing plugin**, choose the verified **Developer identity**, and upload the ZIP. No upload has been performed as part of this release.
@@ -50,15 +50,15 @@ The `.agents/plugins/marketplace.json` in this repo is a self-hosted catalog, no
 
 Use this text after verifying the release and publisher account. Supply contact details only through the relevant portal.
 
-**Name:** d-stack  
-**Publisher:** Shomo  
-**Category:** Productivity  
-**Short description:** Research, learn, write  
-**Repository:** https://github.com/shomoD9/d-stack  
-**Release:** https://github.com/shomoD9/d-stack/releases/tag/v1.0.0  
-**Support:** https://github.com/shomoD9/d-stack/issues  
-**Claude plugin path:** repository root  
-**Version:** 1.0.0
+**Name:** d-stack
+**Publisher:** Shomo
+**Category:** Productivity
+**Short description:** Research, learn, write
+**Repository:** https://github.com/shomoD9/d-stack
+**Release:** https://github.com/shomoD9/d-stack/releases/tag/v1.0.1
+**Support:** https://github.com/shomoD9/d-stack/issues
+**Claude plugin path:** repository root
+**Version:** 1.0.1
 
 **Description:**
 

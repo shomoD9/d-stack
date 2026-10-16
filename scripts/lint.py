@@ -46,7 +46,7 @@ def main():
     claude = manifests['.claude-plugin/plugin.json']
     codex = manifests['.codex-plugin/plugin.json']
     for meta in [claude, codex]:
-        check(meta['name'] == 'd-stack' and meta['version'] == '1.0.0', 'Plugin identity/version mismatch')
+        check(meta['name'] == 'd-stack' and meta['version'] == '1.0.1', 'Plugin identity/version mismatch')
         check(isinstance(meta['description'], str), 'Missing description')
     check(codex['skills'] == './skills/', 'Codex skills path mismatch')
     check(codex['author']['name'] == 'Shomo', 'Codex publisher missing')

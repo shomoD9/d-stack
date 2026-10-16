@@ -13,7 +13,7 @@ Twelve workflows, plain Markdown, and supporting resources. Install the whole st
 | Tool | Recommended path | Alternative |
 | --- | --- | --- |
 | Claude Code | Plugin marketplace commands below | Shell installer into `~/.claude/skills` |
-| Codex | Shell installer into `~/.agents/skills` | Codex plugin marketplace; install through the desktop Plugins Directory |
+| Codex | Plugin marketplace commands below | Shell installer into `~/.agents/skills` |
 | Both | Shell installer with `--all` | Vercel's `skills` CLI |
 
 In Claude Code:
@@ -23,43 +23,7 @@ In Claude Code:
 /plugin install d-stack@d-stack
 ```
 
-Or use the shell installer (Bash and Git required):
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh | bash
-# Choose a tool:
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh | bash -s -- --claude
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh | bash -s -- --codex
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh | bash -s -- --all
-# One skill, including any bundled dependencies:
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh | bash -s -- --codex --skill research
-```
-
-To inspect the script before running it, download `install.sh`, read it, then run `bash install.sh --all`. Streamed installs clone `main`; set `D_STACK_REF=v1.0.0` on the Bash process to pin a release:
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/shomoD9/d-stack/v1.0.0/install.sh | D_STACK_REF=v1.0.0 bash -s -- --all
-```
-
-The installer respects `HOME`, preserves unowned skill directories, and includes license notices and supporting files. Repeating a command refreshes the same selection. Edits inside installer-owned skill folders are replaced on update and removed on uninstall; keep custom skills in separate folders. Use one install method per tool to avoid duplicate skills.
-
-```sh
-# From a local checkout; these flags also work with bash -s -- in the curl command:
-bash install.sh --all --update
-bash install.sh --codex --skill research --update
-bash install.sh --all --uninstall
-bash install.sh --claude --skill research --uninstall
-```
-
-Uninstall needs no network and only removes folders carrying this installer's ownership marker. Removing a single skill leaves shared dependencies in place. Plugin installs use the host's update/uninstall commands instead:
-
-```text
-/plugin marketplace update d-stack
-/plugin update d-stack@d-stack
-/plugin uninstall d-stack@d-stack
-```
-
-### Codex plugin option
+### Codex marketplace
 
 Current [Codex skill docs](https://developers.openai.com/codex/skills) use `~/.agents/skills` for personal skills. Older setups may use `~/.codex/skills`; this installer targets the current documented directory.
 
@@ -77,6 +41,46 @@ codex plugin add d-stack@d-stack
 ```
 
 Catalog registration and CLI installation are tested. The [packaging guide](https://developers.openai.com/plugins/build/plugins) also describes desktop installation: restart the ChatGPT desktop app, open the Plugins Directory in Codex, choose **d-stack**, and install. Desktop discovery and activation need a desktop session and are not verified here. The standalone shell path works without that step.
+
+### Shell installer
+
+Or use the shell installer (Bash and Git required):
+
+```sh
+curl -fsSLO https://raw.githubusercontent.com/shomoD9/d-stack/main/install.sh
+bash install.sh
+# Choose a tool:
+bash install.sh --claude
+bash install.sh --codex
+bash install.sh --all
+# One skill, including any bundled dependencies:
+bash install.sh --codex --skill research
+```
+
+To inspect the script before running it, download `install.sh`, read it, then run `bash install.sh --all`. Downloaded installs fetch `main`; set `D_STACK_REF=v1.0.1` on the Bash process to pin a release:
+
+```sh
+curl -fsSLO https://raw.githubusercontent.com/shomoD9/d-stack/v1.0.1/install.sh
+D_STACK_REF=v1.0.1 bash install.sh --all
+```
+
+The installer respects `HOME`, preserves unowned skill directories, and includes license notices and supporting files. Repeating a command refreshes the same selection. Edits inside installer-owned skill folders are replaced on update and removed on uninstall; keep custom skills in separate folders. Use one install method per tool to avoid duplicate skills.
+
+```sh
+# From a local checkout or after downloading the installer:
+bash install.sh --all --update
+bash install.sh --codex --skill research --update
+bash install.sh --all --uninstall
+bash install.sh --claude --skill research --uninstall
+```
+
+Uninstall needs no network and only removes folders carrying this installer's ownership marker. Removing a single skill leaves shared dependencies in place. Plugin installs use the host's update/uninstall commands instead:
+
+```text
+/plugin marketplace update d-stack
+/plugin update d-stack@d-stack
+/plugin uninstall d-stack@d-stack
+```
 
 ### With npx
 

@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "d-stack",
       "source": "./",
       "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }

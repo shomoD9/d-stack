@@ -2,6 +2,15 @@
 
 User-visible changes are recorded here. Versions follow Semantic Versioning.
 
+## [1.0.1] - 2026-10-16
+
+### Fixed
+
+- Added a 1024×1024 EB Garamond monogram icon for Claude and Codex listings.
+- Put Claude and Codex marketplace installation first and replaced streamed shell examples with download-then-run instructions.
+- Cleaned up credential-adjacent environment wording in build notes.
+- Clarified the d-stack display name and Shomo publisher repository links.
+
 ## [1.0.0] - 2026-10-16
 
 ### Added
@@ -18,4 +27,5 @@ User-visible changes are recorded here. Versions follow Semantic Versioning.
 - Clarified one phrase in the original writing skill; behavior is unchanged.
 - Preserved upstream credits, MIT notices, and the documented external dependency of `grill-with-docs`.
 
+[1.0.1]: https://github.com/shomoD9/d-stack/releases/tag/v1.0.1
 [1.0.0]: https://github.com/shomoD9/d-stack/releases/tag/v1.0.0
