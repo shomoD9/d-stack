@@ -1,7 +1,7 @@
 {
   "name": "d-stack",
   "version": "1.0.1",
-  "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+  "description": "Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work.",
   "author": {
     "name": "Shomo",
     "url": "https://github.com/shomoD9/d-stack"
@@ -11,7 +11,7 @@
   "license": "MIT",
   "documentationUrl": "https://github.com/shomoD9/d-stack#readme",
   "supportUrl": "https://github.com/shomoD9/d-stack/issues",
-  "keywords": ["research", "writing", "learning", "interviewing", "planning", "prompting", "skills"],
+  "keywords": ["research", "writing", "learning", "interviewing", "planning", "prompting", "delegation", "skills"],
   "displayName": "d-stack",
   "icon": "./.claude-plugin/icon.png"
 }

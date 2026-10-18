@@ -48,12 +48,12 @@ The `.agents/plugins/marketplace.json` in this repo is a self-hosted catalog, no
 
 ## Ready-to-paste submission text
 
-Use this text after verifying the release and publisher account. Supply contact details only through the relevant portal.
+This text describes the current main branch, including unreleased skills. When submitting the pinned release below, use its matching catalog and descriptions. Use this text after verifying the release and publisher account. Supply contact details only through the relevant portal.
 
 **Name:** d-stack
 **Publisher:** Shomo
 **Category:** Productivity
-**Short description:** Research, learn, write
+**Short description:** Research, write, delegate
 **Repository:** https://github.com/shomoD9/d-stack
 **Release:** https://github.com/shomoD9/d-stack/releases/tag/v1.0.1
 **Support:** https://github.com/shomoD9/d-stack/issues
@@ -62,7 +62,7 @@ Use this text after verifying the release and publisher account. Supply contact 
 
 **Description:**
 
-> d-stack bundles twelve skills for primary-source research, learning, questioning plans, finding reading material, and writing clear prose. Skills are Markdown workflows with supporting resources for Claude Code and Codex. No MCP server, service account, or credential is bundled. Some workflows require interactive question tools, and grill-with-docs additionally requires the upstream domain-modeling skill. Matt Pocock's upstream work and Felix Rieseberg's inspiration are credited in the repository; MIT notices are retained.
+> d-stack bundles thirteen skills for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. Skills are Markdown workflows with supporting resources for Claude Code and Codex. No MCP server, service account, or credential is bundled. The operator workflow requires an authenticated coding-agent CLI and access to the tools its task needs. Some workflows require interactive question tools, and grill-with-docs additionally requires the upstream domain-modeling skill. Matt Pocock's upstream work and Felix Rieseberg's inspiration are credited in the repository; MIT notices are retained.
 
 **Verification and reviewer notes:**
 
@@ -70,6 +70,6 @@ Use this text after verifying the release and publisher account. Supply contact 
 
 **Data handling draft, requiring maintainer review:**
 
-> The bundle itself has no hosted backend or declared MCP connection. It relies on the host's existing tools and permissions; research can browse public sources, and some workflows write workspace files or tracker records. The separate shell installer downloads the public Git repository and writes selected skill folders under the user's home directory. Data retention and external tool handling depend on the host and services the user connects. The npx route uses the third-party Vercel skills CLI, whose telemetry controls are documented upstream.
+> The bundle itself has no hosted backend or declared MCP connection. It relies on the host's existing tools and permissions; research can browse public sources, and some workflows write workspace files or tracker records. The operator workflow delegates to locally configured coding-agent services, which may perform authorized repository pushes, publishing, browser work, or video production. The separate shell installer downloads the public Git repository and writes selected skill folders under the user's home directory. Data retention and external tool handling depend on the host and services the user connects. The npx route uses the third-party Vercel skills CLI, whose telemetry controls are documented upstream.
 
 Do not paste a blanket “no data access” answer into compliance fields. Confirm actual host behavior, any directory-required assets, contact details, target audience answers, and account eligibility before submitting.

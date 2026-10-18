@@ -4,14 +4,14 @@
     "name": "Shomo"
   },
   "metadata": {
-    "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+    "description": "Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work.",
     "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "d-stack",
       "source": "./",
-      "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+      "description": "Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work.",
       "version": "1.0.1"
     }
   ]

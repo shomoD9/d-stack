@@ -1,7 +1,7 @@
 {
   "name": "d-stack",
   "version": "1.0.1",
-  "description": "Skills for sharper questions, primary-source research, learning, and clear writing.",
+  "description": "Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work.",
   "skills": "./skills/",
   "author": {
     "name": "Shomo",
@@ -12,15 +12,16 @@
   "license": "MIT",
   "interface": {
     "displayName": "d-stack",
-    "shortDescription": "Research, learn, write",
-    "longDescription": "Twelve Markdown workflows for primary-source research, learning, questioning plans, finding reading material, and writing clear prose. For Claude Code and Codex users. Some skills require interactive question tools; grill-with-docs also requires the upstream domain-modeling skill. No MCP server or account connection is bundled.",
+    "shortDescription": "Research, write, delegate",
+    "longDescription": "Thirteen Markdown workflows for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. For Claude Code and Codex users. Operator requires an authenticated coding-agent CLI and the tools its task needs. Some skills require interactive question tools; grill-with-docs also requires the upstream domain-modeling skill. No MCP server or account connection is bundled.",
     "developerName": "Shomo",
     "category": "Productivity",
     "capabilities": [
       "Research questions",
       "Learn concepts",
       "Stress-test plans",
-      "Write clear prose"
+      "Write clear prose",
+      "Delegate and verify tool work"
     ],
     "websiteURL": "https://github.com/shomoD9/d-stack",
     "supportURL": "https://github.com/shomoD9/d-stack/issues",

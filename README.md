@@ -4,9 +4,9 @@
 [![Release](https://img.shields.io/github/v/release/shomoD9/d-stack)](https://github.com/shomoD9/d-stack/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Skills for sharper questions, primary-source research, learning, and clear writing — in Claude Code and Codex.**
+**Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work in Claude Code and Codex.**
 
-Twelve workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
+Thirteen workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
 
 ## Install
 
@@ -103,7 +103,10 @@ Start a new agent session after installing. Claude plugin skills use the `d-stac
 | Investigate a question | `/d-stack:research Compare the primary sources for this design.` | `$research Compare the primary sources for this design.` |
 | Stress-test a plan | `/d-stack:grill-me Review this migration plan.` | `$grill-me Review this migration plan.` |
 | Learn a topic | `/d-stack:teach Explain database indexes through exercises.` | `$teach Explain database indexes through exercises.` |
+| Delegate multi-step work | `/d-stack:operator Implement and verify this change through a coding agent.` | `$operator Implement and verify this change through a coding agent.` |
 | Deepen a task | Give a task, then `/d-stack:be-depth-ambitious` | Give a task, then select `$be-depth-ambitious` |
+
+The `operator` workflow requires an authenticated Claude Code or Codex CLI and the tools needed for its delegated task.
 
 Skills may assume host-specific tools. In Codex, treat Claude's `Skill` calls as requests to load the named skill, and use an available interactive question tool when requested. Tool availability and workflow quality depend on the host; file installation alone does not verify every conversational workflow.
 
@@ -123,6 +126,7 @@ Generated from `skills/*/SKILL.md` frontmatter by `python3 scripts/lint.py --wri
 | [grilling](skills/grilling) | Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. |
 | [loop-me](skills/loop-me) | Grill me about specs for the workflows I want to build, within this workspace. |
 | [need-reading-material](skills/need-reading-material) | The user is in need for inspiration. Find them high quality sources to read. |
+| [operator](skills/operator) | Operate Claude Code and Codex as services when acting as an orchestrator or chat assistant. Load before starting work to choose direct action or delegation, write a self-contained prompt, monitor the job, verify its output, and report the result. |
 | [research](skills/research) | Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent. |
 | [teach](skills/teach) | Teach the user a new skill or concept, within this workspace. |
 | [wayfinder](skills/wayfinder) | Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |

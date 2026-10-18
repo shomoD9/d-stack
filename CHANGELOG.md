@@ -2,6 +2,13 @@
 
 User-visible changes are recorded here. Versions follow Semantic Versioning.
 
+## [Unreleased]
+
+### Added
+
+- Added the model-invocable `operator` skill for delegating work to Claude Code and Codex, monitoring jobs, verifying artifacts, and reporting results.
+- Updated the thirteen-skill catalog, usage examples, and plugin descriptions. The installer and plugin catalogs discover the new skill from the existing skills directory.
+
 ## [1.0.1] - 2026-10-16
 
 ### Fixed

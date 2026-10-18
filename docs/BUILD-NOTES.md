@@ -63,3 +63,38 @@ There is no Docker binary in this editing environment. The real container verifi
 - Updated listing identity and version metadata, marketplace-first install instructions, and download-then-run examples.
 - Strict Claude marketplace and plugin validation both pass without warnings. The installer lifecycle suite passes.
 - Hosted directory review is separate from CLI validation; directory acceptance has not been rechecked here.
+
+## Unreleased: operator verification
+
+The `operator` addition brings the current main branch to thirteen skills. The
+twelve-skill counts above record historical releases. The new skill permits
+model invocation by omitting `disable-model-invocation`.
+
+Applied pstack's `principle-prove-it-works` guidance by inspecting the source,
+checking installed bytes, and reviewing a real Claude Code response. Local checks:
+
+- `python3 scripts/lint.py --write-catalog` and `python3 scripts/lint.py`: pass with thirteen skills and four manifests. Installed the pinned PyYAML dependency in a temporary virtual environment.
+- `bash -n install.sh scripts/test-install.sh` and `bash scripts/test-install.sh`: pass.
+- Both strict Claude plugin validation commands: pass without warnings.
+- Single-skill `operator` install for both tools in a temporary home with spaces: installed skill bytes match the source; uninstall removes both copies.
+- Executed the documented Codex shell examples with a fixture service: quoted prompt text and paths with spaces survive, stdin is closed, and the background wrapper records both zero and nonzero exits under `bash -e`. This checks shell behavior without launching a Codex task.
+- ShellCheck is unavailable locally; the existing CI workflow runs it.
+
+The installer, installer tests, and `.agents/plugins/marketplace.json` discover
+the existing skills tree rather than enumerating skill names, so they need no
+new registration entries. No release tag or package version was changed.
+
+For a fictional routing exercise, invoked Claude Code with
+`-p --tools "" --no-session-persistence --effort high`. Passed this prompt followed
+by the new skill's full text:
+
+```text
+Use the attached operator skill for a fictional routing exercise. Do not perform the tasks, launch services, access the network, or modify files. Output only a brief plan for each case and a self-contained delegate prompt for case B. A: replace one known word in a provided sentence. B: In repo <repo-dir>, branch feature/example, build a public settings UI from source brief.md, preserve its exact user copy, do not touch authentication, and verify the user flow. Commit but do not push. C: A Codex job has produced no progress for 16 minutes and might have partially published a video; publication was authorized. D: A tool reports success, but its final CI is still running. Explain what to do and what can be reported.
+```
+
+Expected direct handling for A; high-effort delegation with a complete prompt,
+copy preservation, UI verification, and no push for B; a stopped job and side-effect
+check before fallback for C; and pending CI reported as unverified for D.
+The response met those criteria and the CLI exited zero. This exercise checks
+routing and handoff instructions; it does not prove an actual UI build, browser
+session, publication, or video render.
