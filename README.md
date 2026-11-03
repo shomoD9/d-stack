@@ -6,7 +6,7 @@
 
 **Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work in Claude Code and Codex.**
 
-Thirteen workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
+Fourteen workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
 
 ## Install
 
@@ -128,6 +128,7 @@ Generated from `skills/*/SKILL.md` frontmatter by `python3 scripts/lint.py --wri
 | [need-reading-material](skills/need-reading-material) | The user is in need for inspiration. Find them high quality sources to read. |
 | [operator](skills/operator) | Operate Claude Code and Codex as services when acting as an orchestrator or chat assistant. Load before starting work to choose direct action or delegation, write a self-contained prompt, monitor the job, verify its output, and report the result. |
 | [research](skills/research) | Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent. |
+| [simplify-design](skills/simplify-design) | Simplify a product, screen, or codebase toward the standard of Linear's website or Apple Notes. Use when designing, reviewing, or refactoring UI, architecture, or implementation and the goal is fewer elements, labels, and moving parts without breaking anything. |
 | [teach](skills/teach) | Teach the user a new skill or concept, within this workspace. |
 | [wayfinder](skills/wayfinder) | Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |
 | [write-without-ai-slop](skills/write-without-ai-slop) | Draft original expository and analytical prose that is clear, neutral, specific, human, and free of generic AI-writing patterns. Use when writing a new essay, article, post, newsletter, speech, script, memo, guide, syllabus, research summary, literature review, explanation, or argument from a prompt, brief, outline, notes, facts, or source material rather than editing an existing draft. |

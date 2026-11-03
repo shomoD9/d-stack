@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "d-stack",
     "shortDescription": "Research, write, delegate",
-    "longDescription": "Thirteen Markdown workflows for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. For Claude Code and Codex users. Operator requires an authenticated coding-agent CLI and the tools its task needs. Some skills require interactive question tools; grill-with-docs also requires the upstream domain-modeling skill. No MCP server or account connection is bundled.",
+    "longDescription": "Fourteen Markdown workflows for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. For Claude Code and Codex users. Operator requires an authenticated coding-agent CLI and the tools its task needs. Some skills require interactive question tools; grill-with-docs also requires the upstream domain-modeling skill. No MCP server or account connection is bundled.",
     "developerName": "Shomo",
     "category": "Productivity",
     "capabilities": [

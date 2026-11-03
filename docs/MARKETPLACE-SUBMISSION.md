@@ -62,7 +62,7 @@ This text describes the current main branch, including unreleased skills. When s
 
 **Description:**
 
-> d-stack bundles thirteen skills for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. Skills are Markdown workflows with supporting resources for Claude Code and Codex. No MCP server, service account, or credential is bundled. The operator workflow requires an authenticated coding-agent CLI and access to the tools its task needs. Some workflows require interactive question tools, and grill-with-docs additionally requires the upstream domain-modeling skill. Matt Pocock's upstream work and Felix Rieseberg's inspiration are credited in the repository; MIT notices are retained.
+> d-stack bundles fourteen skills for primary-source research, learning, questioning plans, finding reading material, writing clear prose, and operating Claude Code and Codex as services. Skills are Markdown workflows with supporting resources for Claude Code and Codex. No MCP server, service account, or credential is bundled. The operator workflow requires an authenticated coding-agent CLI and access to the tools its task needs. Some workflows require interactive question tools, and grill-with-docs additionally requires the upstream domain-modeling skill. Matt Pocock's upstream work and Felix Rieseberg's inspiration are credited in the repository; MIT notices are retained.
 
 **Verification and reviewer notes:**
 
