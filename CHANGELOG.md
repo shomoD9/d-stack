@@ -8,7 +8,8 @@ User-visible changes are recorded here. Versions follow Semantic Versioning.
 
 - Added the model-invocable `operator` skill for delegating work to Claude Code and Codex, monitoring jobs, verifying artifacts, and reporting results.
 - Added the model-invocable `simplify-design` skill for cutting taglines, helper text, and secondary labels and simplifying purpose, architecture, design, and implementation without breaking anything.
-- Updated the fourteen-skill catalog, usage examples, and plugin descriptions. The installer and plugin catalogs discover the new skill from the existing skills directory.
+- Added the model-invocable `declauding` skill, vendored unchanged at v0.13.0 from Oskar Austegard's oaustegard/claude-skills. It rewrites the prose tics of language models into plain human technical prose, as a clean rewrite or an annotated HTML diff.
+- Updated the fifteen-skill catalog, usage examples, and plugin descriptions. The installer and plugin catalogs discover the new skill from the existing skills directory.
 
 ## [1.0.1] - 2026-10-16
 

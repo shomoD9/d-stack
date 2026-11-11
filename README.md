@@ -6,7 +6,7 @@
 
 **Skills for sharper questions, primary-source research, learning, clear writing, and delegated tool work in Claude Code and Codex.**
 
-Fourteen workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
+Fifteen workflows, plain Markdown, and supporting resources. Install the whole stack or choose a skill.
 
 ## Install
 
@@ -121,6 +121,7 @@ Generated from `skills/*/SKILL.md` frontmatter by `python3 scripts/lint.py --wri
 | [be-altitude-ambitious](skills/be-altitude-ambitious) | Invoked as /be-altitude-ambitious AFTER the user has already given the agent a task; it applies to the task just prompted. Rewrites that task to be higher, not bigger, by asking what goal sits behind it and what the owner of that outcome would do. |
 | [be-depth-ambitious](skills/be-depth-ambitious) | Invoked as /be-depth-ambitious AFTER the user has already given the agent a task; it applies to the task just prompted. Rewrites that task to be deeper, not bigger, by asking what a top professional would do, starting from raw material, with specific methods and independent verification. |
 | [be-range-ambitious](skills/be-range-ambitious) | Invoked as /be-range-ambitious AFTER the user has already given the agent a task; it applies to the task just prompted. Rewrites that task to be wider, not bigger, by bringing in specialists from other fields, including one who attacks the result. |
+| [declauding](skills/declauding) | Load at the start of any task whose deliverable is prose another person will read — a PR description, commit message, README, doc, postmortem, blog post, issue or review comment, report, release note or essay — before drafting it, whether the result is pushed, posted, published or saved to a file, without being asked. Draft, then run this pass on the draft before handing it over. Also use when someone says "de-claude", "de-slop", "humanize this", "this reads like AI", "make it sound human", or asks for a voice, tone or register edit. Rewrites the constructions that mark prose as model-written (staged reveals, verdict headers, aphoristic closers, "it's not X, it's Y", em-dash drama, forced triads, flat-certainty adverbs, noun stacks, dropped 'that') into plain technical prose and checks the rewrite kept every claim. Not for fiction, poetry, code, or quoted text; for a full adversarial review of a deliverable use challenging. |
 | [grill-me](skills/grill-me) | A relentless interview to sharpen a plan or design. |
 | [grill-with-docs](skills/grill-with-docs) | A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. |
 | [grilling](skills/grilling) | Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. |
@@ -158,9 +159,11 @@ Most of the grilling and planning skills come from Matt Pocock's [mattpocock/ski
 - `grill-me`, `grill-with-docs`, `wayfinder`, `research` and `teach` are copied from that repository without changes.
 - `grilling` is an edited version of the upstream skill. `loop-me` is derived from it.
 
+`declauding` comes from Oskar Austegard's [oaustegard/claude-skills](https://github.com/oaustegard/claude-skills), released under the MIT License. It is copied from the [declauding-v0.13.0 release](https://github.com/oaustegard/claude-skills/releases/tag/declauding-v0.13.0) without changes.
+
 `need-reading-material` and `write-without-ai-slop` are Shomo's own. `be-depth-ambitious`, `be-altitude-ambitious` and `be-range-ambitious` are inspired by Felix Rieseberg's essay [How to be more ambitious: a tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/).
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the upstream copyright notice and license text.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the upstream copyright notices and license texts.
 
 ## License
 
